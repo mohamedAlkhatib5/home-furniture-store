@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link fontawesome /font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link Bootstrab -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Link Swiper's CSS -->
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>shop page</title>
+</head>
+
+<body>
+    <header class="position-fixed top-0 ">
+        <div class="nav-wrapper">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top  ">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              
+                <span class="navbar-toggler-icon"></span>
+             </button>
+
+                    <a class="navbar-brand  ms-lg-2" href="index.html">3legant<span class="logo-span">.</span></a>
+                    <div class="offcanvas vh-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand me-lg-auto ms-1" href="index.html">3legant<span class="logo-span">.</span></a></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column align-items-lg-center justify-content-center">
+                            <ul class=" navbar-nav  nanbar-nav-r mx-lg-auto mb-2 mb-lg-0">
+                                <li class="nav-item nav-item-home d-lg-none ">
+                                    <div class="search2 d-lg-none d-flex">
+                                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                                        <button type="submit" class="searchButton">
+                                              <i class="fa fa-search"></i>
+                                           </button>
+                                    </div>
+                                </li>
+                                <li class="nav-item nav-item-home me-lg-2 mt-lg-0 mt-2">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item nav-item-shop me-lg-2">
+                                    <a class="nav-link" href="shop-page.html">Shop</a>
+                                </li>
+
+                                <li class="nav-item nav-item-product me-lg-2">
+                                    <a class="nav-link" href="product.html">Product</a>
+                                </li>
+
+                                <li class="nav-item nav-item-contact">
+                                    <a class="nav-link" href="blog.html">Blogs</a>
+                                </li>
+
+                                <li class="nav-item nav-item-contact">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+
+                            </ul>
+
+                            <ul class="d-none d-lg-block d-md-none navbar-nav  ms-lg-auto mb-2 mb-lg-0">
+                                <li class="nav-item nav-item-c">
+
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <button class=" me-lg-3 bg-transparent border-0 d-none d-lg-inline-block" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search " ></i></button>
+
+                    <div class="nav-item pe-3 dropdown ms-lg-0 ms-auto ">
+
+                        <a class="black-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-circle-user "></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item d-flex justify-content-between" href="my-account.html "> <span>My account</span> <i class="fa-solid fa-user-large  "></i></a>
+
+                            <a class="dropdown-item d-flex justify-content-between" href="sign-in.html"> <span>Sign in</span> <i class="fa-solid fa-right-to-bracket  "></i></a>
+
+                            <a class="dropdown-item d-flex justify-content-between" href="sign-up.html"> <span>Sign up</span> <i class="fa-solid fa-user-plus "></i></a>
+                        </div>
+                    </div>
+
+                    <a class=" position-relative black-color me-lg-3 me-2" href="#" onclick="open_cart()">
+                        <i class="pe-2 fa-solid fa-bag-shopping"></i>
+                        <span class="cart-counter position-absolute top-0  start-100  translate-middle badge rounded-pill text-bg-secondary count_item ">0</span>
+                    </a>
+
+
+
+                </div>
+
+            </nav>
+        </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- modal search-->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchModalLabel">search</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="/search" method="get">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="search here.." required>
+                                <button type="submit" class="btn btn-secondary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /* ************************cart right******************************** */ -->
+        <div class="cart">
+            <div class="top_cart">
+                <h2><span>C</span>art</h2>
+                <span class="close_cart" onclick="close_cart()"><i class="fa-regular fa-circle-xmark"></i></span>
+            </div>
+
+            <div class="items_in_cart">
+
+
+            </div>
+
+            <div class="botton_cart">
+                <div class="total">
+                    <p>cart subtotal</p>
+                    <p class="price_cart_total">$0</p>
+                </div>
+                <div class="button_cart">
+
+                    <button class="btn_cart trans_bg">Checkout</button>
+                    <a href="cart.html" class="">View Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-1">
+            <div class="container h-100   p-0 ">
+                <div class="row h-100 w-100 img-hero  h-100 ">
+                    <img src="assets/img/blogbag.png" alt="">
+                    <div class="containt w-100 d-flex i d-flex align-content-center justify-content-center w-100 h-100  ">
+                        <div class="d-flex align-content-center justify-content-center flex-column h-100  ">
+                            <div class="link-page mt-5 ms-5 w-100">
+                                <a href="#">Home <span class="text-secondary">></span></a>
+                                <a href="#">blog</a>
+                            </div>
+                            <div class="mytiytl mb-3">Our Blog</div>
+                            <p>Home ideas and design inspiration.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="products-sec ">
+            <div class="container  ">
+
+                <div class=" h-100 w-100 ">
+                    <div class="d-flex justify-content-between w-100 my-lg-3  me-0 pt-lg-0 pt-3 ">
+                        <div class="d-flex justify-content-between flex-lg-row flex-column">
+                            <a href="#" class="text-black mt-3 ms-3"> All Blog</a>
+
+                            <p class="mx-5  mt-3  order-lg-2  order-1 fw-bold text-secondary">Featured</p>
+                        </div>
+
+                        <div class=" sortby  d-flex flex-lg-row flex-column">
+
+                            <div class="dropdown mx-lg-5 mt-3  order-lg-1  order-2 ">
+                                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sort by 
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            <div class=" d-flex  order-lg-2  order-1">
+                                <button class="rounded-1 me-2 sort-btn" onclick="sortblog()"><i class="fa-solid fa-grip icon-sort"></i></i>
+                                </button>
+                                <button class="rounded-1  sort-btn" onclick="sort2blog()"><i class="fa-solid fa-grip-lines icon-sort-2"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="blog w-100 pt-lg-0 pt-3 " id="blog">
+
+                    </div>
+                    <div class="w-100 text-center"><a href="#" class="show-more">Show more</a></div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </section>
+
+        <section class="sec-email  pt-lg-5  d-flex  align-items-center w-100 mt-5">
+            <div class="email  d-flex  align-items-center">
+                <div class=" d-flex flex-column align-items-center  ">
+                    <p style="font-size: 30px; font-weight: 500;" class="title-email">Join Our Newsletter</p>
+                    <p>Sign up for deals, new products and promotions</p>
+                    <form action="" class="d-flex ">
+                        <i class="fa-regular fa-envelope  mx-3 mt-3  " style="font-size: 20px;"></i>
+                        <input type="email" placeholder=" Email address"> <button>Signup</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer style="background: rgba(20, 23, 24, 1); ">
+        <div class="container text-center text-lg-start ">
+            <div class="row w-100 d-flex flex-lg-row py-5 align-items-center flex-column ">
+                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-column flex-lg-row ">
+                    <a href="# " class=" " style="color:white ">3legant. <span style="color: rgba(232, 236, 239, 1); margin-inline: 20px; " class="d-none d-lg-inline-block ">|</span></a>
+                    <p style="color: rgba(232, 236, 239, 1); ">Gift & Decoration Store </p>
+                </div>
+                <ul class=" col d-flex flex-lg-row justify-content-end flex-column navfooter ">
+                    <li class="nav-item mx-4 list-group-item ">
+                        <a class="nav-link active " aria-current="page " href="# ">Home</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="shop-page.html">Shop</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row w-100 d-flex border-top border-secondary mt-lg-3 mt-2 justify-content-lg-between flex-column flex-lg-row  pt-2">
+                <div class="d-flex col-lg-8 flex-column flex-lg-row order-2 order-lg-1 ">
+                    <a class="me-2 " href="#" style="color: rgb(121, 121, 121); text-decoration: none;">Copyright © 2023 3legant. All rights reserved</a>
+                    <a href="#" class="ms-lg-2 " style="color: rgba(254, 254, 254, 1);  text-decoration: none;">Privacy Policy</a>
+                    <a href="#" class="mx-2" style="color: rgba(232, 236, 239, 1); text-decoration: none;">Terms of Use</a>
+                </div>
+                <div class="icons col-lg-4 d-flex justify-content-lg-end justify-content-center order-1 order-lg-2 my-lg-0 my-2 ">
+                    <a href="# " class="text-light mx-2 " style="font-size: 20px; "><i class="fa-brands fa-instagram "></i></a>
+                    <a href="# " class="text-light mx-2 " style="font-size: 20px; "> <i class="fa-brands fa-facebook "></i></a>
+                    <a href="# " class="text-light mx-2 " style="font-size: 20px; "><i class="fa-brands fa-youtube "></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+    </footer>
+
+
+    <script src="assets/js/blog-items.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/custom.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin=" anonymous" referrerpolicy="no-referrer "></script>
+
+</body>
+
+</html>
+
+</html>

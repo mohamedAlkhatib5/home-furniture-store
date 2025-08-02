@@ -1,0 +1,34 @@
+    .text {
+        margin-top: 50px;
+    }
+    
+    .title-contact {
+        font-size: 70px;
+        font-weight: 500;
+    }
+    
+    .card-contact {
+        width: 25%;
+        padding: 10px;
+    }
+    
+    .Message {
+        border: none;
+        padding: 10px 40px;
+        color: var(--white-color);
+        background-color: var(--dark-color);
+        border-radius: 10px;
+    }
+    
+    @media (max-width: 1000px) {
+        .card-contact {
+            width: 80%;
+            padding: 20px;
+            margin-inline: 10%;
+            margin-top: 10%;
+        }
+        .title-contact {
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }

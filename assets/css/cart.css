@@ -1,0 +1,136 @@
+.setion-cart {
+    margin-top: 100px;
+}
+
+.title-cart {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.nav-pills .show>.nav-link {
+    border-bottom: 1px;
+    color: var(--gray-color);
+    background-color: transparent;
+}
+
+.nav-pills .nav-link.active {
+    color: black;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    border-radius: 0px;
+    padding-bottom: 40px;
+}
+
+.nav-link {
+    color: var(--gray-color)
+}
+
+.number-circle {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border-radius: 30px;
+    margin-inline: 30px;
+    padding: 10px 17px;
+    text-align: center;
+}
+
+.form-check {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.form-check:hover {
+    background-color: #6C7275;
+}
+
+.Checkout-button {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    width: 100%;
+    padding-block: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.Checkout-button:hover {
+    background-color: var(--gray-color);
+    color: var(--dark-color);
+    border: none;
+    transform: scale(1.1);
+}
+
+.form-check-input:checked {
+    background: #141718;
+}
+
+.form-check .form-check-input {
+    margin-left: 1em;
+}
+
+.forms form p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.forms form {
+    border: 1px solid #6C7275;
+}
+
+.Order-summary {
+    border: 1px solid #6C7275;
+}
+
+.coupon button {
+    background-color: var(--white-color);
+}
+
+.coupon button:hover {
+    background-color: var(--gray-color);
+}
+
+.Thankyou {
+    background: #FFFFFF;
+    box-shadow: 0px 32px 48px -48px #1212121A;
+}
+
+.Thank-you p:first-child {
+    font-size: 60px;
+}
+
+.thank {
+    font-size: 50px;
+}
+
+.Purchase-button {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 200px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.Purchase-button:hover {
+    color: var(--dark-colorcolor);
+    background-color: var(--gray-color);
+    transform: scale(1.1);
+}
+
+@media (max-width: 890px) {
+    .sec-email {
+        width: 100%;
+        height: 50vh;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: rgba(242, 244, 246, 1);
+    }
+    .number-circle {
+        margin-inline: 30px;
+        padding: 10px 20px;
+    }
+    .title-cart-none {
+        display: none;
+    }
+}

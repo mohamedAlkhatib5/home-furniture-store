@@ -1,0 +1,41 @@
+                .product-sec1 {
+                    margin-top: 80px;
+                }
+                
+                .title-pro {
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+                
+                .button1 {
+                    background-color: transparent;
+                    color: var(--dark-color);
+                    padding: 5px 100px;
+                    border-radius: 10px;
+                }
+                
+                .button2 {
+                    background-color: var(--dark-color);
+                    color: var(--white-color);
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: 100%;
+                }
+                
+                header {
+                    z-index: 100;
+                }
+                
+                input[type="number"] {
+                    text-align: center;
+                }
+                
+                .mod img {
+                    transition: all 0.3s ease;
+                    width: 45%;
+                    margin: 10px;
+                }
+                
+                .mod img:hover {
+                    transform: scale(0.9);
+                }

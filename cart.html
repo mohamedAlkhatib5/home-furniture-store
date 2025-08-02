@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link fontawesome /font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link Bootstrab -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Link Swiper's CSS -->
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>cart</title>
+</head>
+
+<body>
+    <header class="position-fixed top-0 ">
+        <div class="nav-wrapper">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top  ">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              
+                <span class="navbar-toggler-icon"></span>
+             </button>
+
+                    <a class="navbar-brand  ms-1" href="index.html">3legant<span class="logo-span">.</span></a>
+                    <div class="offcanvas vh-100 offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand me-lg-auto ms-1" href="index.html">3legant<span class="logo-span">.</span></a></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column align-items-lg-center justify-content-center">
+                            <ul class=" navbar-nav  nanbar-nav-r mx-lg-auto mb-2 mb-lg-0">
+                                <li class="nav-item nav-item-home d-lg-none ">
+                                    <div class="search2 d-lg-none d-flex">
+                                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                                        <button type="submit" class="searchButton">
+                                              <i class="fa fa-search"></i>
+                                           </button>
+                                    </div>
+                                </li>
+                                <li class="nav-item nav-item-home me-lg-2 mt-lg-0 mt-2">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item nav-item-shop me-lg-2">
+                                    <a class="nav-link" href="shop-page.html">Shop</a>
+                                </li>
+
+                                <li class="nav-item nav-item-product me-lg-2">
+                                    <a class="nav-link" href="product.html">Product</a>
+                                </li>
+
+                                <li class="nav-item nav-item-contact">
+                                    <a class="nav-link" href="blog.html">Blogs</a>
+                                </li>
+
+                                <li class="nav-item nav-item-contact">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+
+                            </ul>
+
+                            <ul class="d-none d-lg-block d-md-none navbar-nav  ms-lg-auto mb-2 mb-lg-0">
+                                <li class="nav-item nav-item-c">
+
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <button class=" me-lg-3 bg-transparent border-0 d-none d-lg-inline-block" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search " ></i></button>
+
+                    <div class="nav-item pe-3 dropdown ms-lg-0 ms-auto ">
+
+                        <a class="black-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-circle-user "></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item d-flex justify-content-between" href="my-account.html "> <span>My account</span> <i class="fa-solid fa-user-large  "></i></a>
+
+                            <a class="dropdown-item d-flex justify-content-between" href="sign-in.html"> <span>Sign in</span> <i class="fa-solid fa-right-to-bracket  "></i></a>
+
+                            <a class="dropdown-item d-flex justify-content-between" href="sign-up.html"> <span>Sign up</span> <i class="fa-solid fa-user-plus "></i></a>
+                        </div>
+                    </div>
+
+                    <a class=" position-relative black-color me-lg-3 me-2" href="#" onclick="open_cart()">
+                        <i class="pe-2 fa-solid fa-bag-shopping"></i>
+                        <span class="cart-counter position-absolute top-0  start-100  translate-middle badge rounded-pill text-bg-secondary count_item ">0</span>
+                    </a>
+
+
+
+                </div>
+
+            </nav>
+        </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- modal search-->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchModalLabel">search</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- نموذج البحث -->
+                        <form action="/search" method="get">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="search here.." required>
+                                <button type="submit" class="btn btn-secondary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /* ************************cart right******************************** */ -->
+        <div class="cart">
+            <div class="top_cart">
+                <h2><span>C</span>art</h2>
+                <span class="close_cart" onclick="close_cart()"><i class="fa-regular fa-circle-xmark"></i></span>
+            </div>
+
+            <div class="items_in_cart">
+
+
+            </div>
+
+            <div class="botton_cart">
+                <div class="total">
+                    <p>cart subtotal</p>
+                    <p class="price_cart_total">$0</p>
+                </div>
+                <div class="button_cart">
+
+                    <button class="btn_cart trans_bg">Checkout</button>
+                    <a href="cart.html" class="">View Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="setion-cart">
+            <div class="">
+                <div class=" d-flex justify-content-center align-content-center w-100">
+                    <div class="row w-100 d-flex justify-content-center align-content-center flex-column ">
+                        <div class="title-cart text-center mb-4">Cart</div>
+                        <ul class="nav nav-pills mb-4  d-flex justify-content-center flex-row " id="pills-tab" role="tablist">
+                            <li class="nav-item m-lg-4 m-md-3 m-0 p-0 active " role="presentation">
+                                <button class="nav-link active p-lg-4  p-0 pb-3 " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><span class="number-circle">1</span > <span class="title-cart-none">Shopping cart</span></button>
+                            </li>
+                            <li class="nav-item m-lg-4 m-md-3 m-0 py-lg-0  " role="presentation">
+                                <button class="nav-link p-lg-4 p-0 pb-3 " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><span class="number-circle">2</span> <span class="title-cart-none">Checkout details</span></button>
+                            </li>
+                            <li class="nav-item m-lg-4 m-md-3 m-0 py-lg-0 " role="presentation">
+                                <button class="nav-link p-lg-4 p-0 pb-3" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="number-circle">3</span> <span class="title-cart-none">complete</span></button>
+                            </li>
+
+                        </ul>
+
+                        <div class="tab-content show w-100   " id="pills-tabContent" role="tabpanel " aria-labelledby="pills-home-tab " tabindex="0 ">
+                            <div class="tab-pane fade show active " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                <div class="container">
+                                    <div class="row p-lg-5">
+                                        <div class="col-lg-6   p-0 ">
+                                            <div class="d-flex justify-content-between w-100  border-bottom">
+                                                <p class="w-25 ">Product</p>
+                                                <div class="d-flex  justify-content-between w-50">
+
+                                                    <p>Quantity</p>
+                                                    <p>Price</p>
+                                                    <p>Subtotal</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="product-shop d-flex justify-content-between w-100 my-3  border-bottom pb-4">
+                                                <div class=" d-flex w-50">
+                                                    <img src="assets/img/pro11.png" alt="" class="h-100">
+                                                    <div class="ms-2 ">
+                                                        <p>Tray Table</p>
+                                                        <p class="text-secondary">Color: Black</p>
+                                                        <p class="text-secondary"> X Remove</p>
+                                                    </div>
+                                                </div>
+                                                <div class=" d-flex justify-content-center w-50 ">
+                                                    <input type="number" class=" mx-3 mx-3 w-25 h-25 " value="0">
+                                                    <p class="mx-3 ">$38.00</p>
+                                                    <p>$19.00</p>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="product-shop d-flex justify-content-between w-100 my-3 border-bottom pb-4 ">
+                                                <div class=" d-flex w-50 ">
+                                                    <img src="assets/img/pro11.png " alt=" " class="h-100 ">
+                                                    <div class="ms-2 ">
+                                                        <p>Tray Table</p>
+                                                        <p class="text-secondary">Color: Black</p>
+                                                        <p class="text-secondary"> X Remove</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-center w-50 ">
+                                                    <input type="number" class=" mx-3 w-25 h-25 " value="0">
+                                                    <p class="mx-3 ">$38.00</p>
+                                                    <p>$19.00</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 d-flex justify-content-center p-lg-5  p-1 order-3 order-lg-2 mt-lg-0 mt-4 ">
+
+                                            <div class=" w-100 border border-1 border-black p-4 ">
+                                                <p class="fw-medium fa-2x ">cart summary</p>
+                                                <div class="form-check w-100 ">
+                                                    <input class="form-check-input " type="radio" name="exampleRadios " id="exampleRadios1 " value="option1 " checked>
+                                                    <label class="form-check-label ms-2 " for="exampleRadios1 ">
+                                                    Free shipping
+                                                </label>
+                                                </div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input " type="radio" name="exampleRadios " id="exampleRadios2 " value="option2 ">
+                                                    <label class="form-check-label ms-2 " for="exampleRadios2 ">
+                                                    Express shipping
+                                                </label>
+                                                </div>
+                                                <div class="form-check ">
+                                                    <input class="form-check-input " type="radio" name="exampleRadios " id="exampleRadios3 " value="option3 ">
+                                                    <label class="form-check-label ms-2 " for="exampleRadios3 ">
+                                                    Pick Up
+                                                </label>
+                                                </div>
+                                                <div class="d-flex justify-content-between border-bottom border-secondary py-2 ">
+                                                    <p>Subtotal</p>
+                                                    <p>$1234.00</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between border-bottom border-secondary py-2 mb-2 ">
+                                                    <p>Total</p>
+                                                    <p>$1345.00</p>
+                                                </div>
+                                                <button class="Checkout-button ">Checkout</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-12 order-2 order-lg-3">
+                                            <p class="fw-bold fa-2x">Have a coupon?</p>
+                                            <p>Add your code for an instant cart discount</p>
+                                            <form action="" class="coupon border border-1  d-flex justify-content-between p-2">
+                                                <input type="text" placeholder="Coupon Code" class=" border-0 w-100 h-100 p-3  "> <button class="border-0 h-100 p-3 rounded-1 ">Apply</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show  w-100 p-0" id="pills-profile" role="tabpanel " aria-labelledby="pills-profile-tab " tabindex="1 ">
+
+                                <div class="row w-100 px-lg-5 pt-5 px-0 ">
+                                    <div class="col-lg-7 col-12 forms d-flex flex-column p-0">
+                                        <form class="row g-3 mb-5  p-2  ">
+                                            <p>Contact Infomation</p>
+                                            <div class="col-md-6 ">
+                                                <label for="inputEmail4" class="form-label">first name</label>
+                                                <input type="text" class="form-control" id="inputEmail4" placeholder="First name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputPassword4" class="form-label">Last name</label>
+                                                <input type="text" class="form-control" id="inputPassword4" placeholder="last name">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="inputAddress" class="form-label"> Phone number</label>
+                                                <input type="password" class="form-control" id="inputAddress" placeholder="Phone number">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="inputAddress2" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="inputAddress2" placeholder="Your Email">
+                                            </div>
+
+                                        </form>
+                                        <form class="row g-3 mb-5  p-2">
+                                            <p>Shipping Address</p>
+                                            <div class="col-12">
+                                                <label for="Street Address" class="form-label"> Street Address *</label>
+                                                <input type="text" class="form-control" id="Street Address" placeholder="Street Address ">
+                                            </div>
+                                            <div class="">
+                                                <label for="Country" class="form-label">Country *</label>
+                                                <select class="form-select" aria-label="Default select example" id="Country">
+                                                    <option selected >Country </option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                  </select>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="City" class="form-label">Town / City *</label>
+                                                <input type="text" class="form-control" id="City" placeholder="Town / City ">
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <label for="State" class="form-label">State</label>
+                                                <input type="text" class="form-control" id="State" placeholder="State">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="Zip Code" class="form-label">Zip Code</label>
+                                                <input type="password" class="form-control" id="Zip Code" placeholder="Zip Code">
+                                            </div>
+
+
+                                        </form>
+                                        <form class="row g-3 mb-5  p-2">
+                                            <p>Payment method</p>
+                                            <div class="form-check w-100 ">
+                                                <input class="form-check-input " type="radio" name="exampleRadios " id="exampleRadios1 " value="option1 " checked>
+                                                <label class="form-check-label ms-2 " for="exampleRadios1 ">
+                                                    Pay by Card Credit
+                                                </label>
+                                            </div>
+                                            <div class="form-check ">
+                                                <input class="form-check-input " type="radio" name="exampleRadios " id="exampleRadios2 " value="option2 ">
+                                                <label class="form-check-label ms-2 " for="exampleRadios2 ">
+                                                    Paypal
+                                                </label>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="Card Number" class="form-label">Card Number</label>
+                                                <input type="email" class="form-control" id="Card Number" placeholder="Card Number">
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <label for="Expiration date" class="form-label">Expiration date</label>
+                                                <input type="text" class="form-control" id="Expiration date" placeholder="Expiration date">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="CVC" class="form-label">CVC</label>
+                                                <input type="text" class="form-control" id="CVC" placeholder="CVC">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 px-lg-3 p-0 mb-lg-0 mb-3">
+                                        <div class="Order-summary d-flex flex-column  p-3 ">
+                                            <p style="font-size: 30px; font-weight: 400; " class="ms-3">Order summary</p>
+                                            <div class=" d-flex border-bottom  p-3 py-lg-3 py-5 w-100 justify-content-between">
+                                                <div class="d-flex w-50"><img src="assets/img/pro11.png" alt="" class="h-100">
+                                                    <div class="ms-2 w-100 ">
+                                                        <p>Tray Table</p>
+                                                        <p class="text-secondary">Color: Black</p>
+                                                        <input type="number" class="w-100" value="0">
+                                                    </div>
+                                                </div>
+                                                <p>$38.00</p>
+                                            </div>
+                                            <div class=" d-flex border-bottom border-top p-3 w-100 justify-content-between">
+                                                <div class="d-flex w-50">
+                                                    <img src="assets/img/pro11.png" alt="" class="h-100">
+                                                    <div class="ms-2 ">
+                                                        <p>Tray Table</p>
+                                                        <p class="text-secondary">Color: Black</p>
+                                                        <input type="number" class="w-100" value="0">
+                                                    </div>
+                                                </div>
+                                                <p>$38.00</p>
+                                            </div>
+                                            <form action="" class="coupon  w-100 d-flex justify-content-between  mt-4">
+                                                <input type="text" placeholder="Coupon Code" class=" h-100  p-2 w-75  border border-1"> <button class="border-0 h-100  border border-1 bg-black text-white p-2  w-25 ms-3 ">Apply</button>
+                                            </form>
+                                            <div class=" d-flex justify-content-between  border-top mt-2">
+                                                <p>JenkateMW</p>
+                                                <p style="color: var(--green);">-$25.00 [Remove]</p>
+                                            </div>
+                                            <div class=" d-flex justify-content-between  border-bottom border-top ">
+                                                <p>Shipping</p>
+                                                <p>Free</p>
+                                            </div>
+
+                                            <div class="total d-flex justify-content-between   border-top   ">
+                                                <p>subtotal</p>
+                                                <p class="price_cart_total">$0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade show " id="pills-contact" role="tabpanel " aria-labelledby="pills-contact-tab " tabindex="2">
+                                <div class="row d-flex justify-content-center align-content-center  p-5  ">
+                                    <div class="col-lg-10 Thankyou  d-flex justify-content-center align-content-center flex-column  text-center border p-5 ">
+                                        <p class="text-secondary thank">Thank you! 🎉</p>
+                                        <div class="fa-2x">Your order has been received</div>
+                                        <div class=" d-flex justify-content-center align-content-center  my-5 w-100">
+                                            <img src="assets/img/pro11.png" alt="" width="100px " height="100px" class="mx-lg-5 mx-3">
+                                            <img src="assets/img/pro11R.png " alt=" " width="100px " height="100px" class="mx-l-5 mx-3">
+                                            <img src="assets/img/pro2.png " alt=" " width="100px " height="100px" class="mx-lg-5 mx-3">
+
+                                        </div>
+                                        <div class=" mx-auto">
+                                            <p class="text-secondary d-flex justify-content-between"> <span>Order code:</span> <span class="text-black  "> #0123_45678</span></p>
+                                            <p class="text-secondary d-flex justify-content-between"><span>Date: </span> <span class="text-black ">October 19, 2023</span></p>
+                                            <p class="text-secondary d-flex justify-content-between"> <span>Total:</span><span class="text-black ">$1,345.00</span></p>
+                                            <p class="text-secondary d-flex justify-content-between"><span>Payment method:</span> <span class="text-black  ">Credit Card</span></p>
+
+                                        </div>
+
+                                        <div class=" d-flex justify-content-center align-content-center">
+                                            <a href="#" class="Purchase-button my-5">Purchase history</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer style="background: rgba(20, 23, 24, 1); ">
+        <div class="container text-center text-lg-start ">
+            <div class="row w-100 d-flex flex-lg-row py-5 align-items-center flex-column ">
+                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-column flex-lg-row ">
+                    <a href="# " class=" " style="color:white ">3legant. <span style="color: rgba(232, 236, 239, 1); margin-inline: 20px; " class="d-none d-lg-inline-block ">|</span></a>
+                    <p style="color: rgba(232, 236, 239, 1); ">Gift & Decoration Store </p>
+                </div>
+                <ul class=" col d-flex flex-lg-row justify-content-end flex-column navfooter ">
+                    <li class="nav-item mx-4 list-group-item ">
+                        <a class="nav-link active " aria-current="page " href="# ">Home</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="shop-page.html">Shop</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item mx-4 list-group-item my-lg-0 my-2 ">
+                        <a class="nav-link " href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row w-100 d-flex border-top border-secondary mt-lg-3 mt-2 justify-content-lg-between flex-column flex-lg-row  pt-2">
+                <div class="d-flex col-lg-8 flex-column flex-lg-row order-2 order-lg-1 ">
+                    <a class="me-2 " href="#" style="color: rgb(121, 121, 121); text-decoration: none;">Copyright © 2023 3legant. All rights reserved</a>
+                    <a href="#" class="ms-lg-2 " style="color: rgba(254, 254, 254, 1);  text-decoration: none;">Privacy Policy</a>
+                    <a href="#" class="mx-2" style="color: rgba(232, 236, 239, 1); text-decoration: none;">Terms of Use</a>
+                </div>
+                <div class="icons col-lg-4 d-flex justify-content-lg-end justify-content-center order-1 order-lg-2 my-lg-0 my-2 ">
+                    <a href="# " class="text-light mx-2 " style="font-size: 20px; "><i class="fa-brands fa-instagram "></i></a>
+                    <a href="# " class="text-light mx-2 " style="font-size: 20px; "> <i class="fa-brands fa-facebook "></i></a>
+                    <a href="# " class="text-light mx-2 " style="font-size: 20px; "><i class="fa-brands fa-youtube "></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    </footer>
+
+
+    <script src="assets/js/items_home.js "></script>
+    <script src="assets/js/custom.js "></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <script src="assets/js/swiper.js "></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin=" anonymous" referrerpolicy="no-referrer "></script>
+
+    <script>
+        // *********title cart***********
+        const navlink1 = document.querySelector('#pills-profile-tab')
+        const navlink2 = document.querySelector('#pills-contact-tab')
+        const navlink3 = document.querySelector('#pills-home-tab')
+        const title = document.querySelector('.title-cart')
+
+        navlink1.addEventListener('click', () => {
+
+
+            title.innerHTML = "Check Out"
+        })
+        navlink2.addEventListener('click', () => {
+
+
+            title.innerHTML = "Complete!"
+        })
+        navlink3.addEventListener('click', () => {
+
+
+            title.innerHTML = "cart"
+        })
+    </script>
+</body>
+
+</html>
+
+</html>

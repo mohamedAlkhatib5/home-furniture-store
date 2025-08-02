@@ -1,0 +1,160 @@
+[{
+        "id": 0,
+        "img": "assets/img/pr1.png",
+        "name": "Loveseat Sofa product",
+        "price": 199.00,
+        "old_price": 400.00
+    },
+    {
+        "id": 1,
+        "img": "assets/img/pro2.png",
+
+        "name": "Table Lamp product",
+        "price": 24.99,
+        "old_price": 199.00
+    },
+    {
+        "id": 2,
+        "img": "assets/img/pro3.png",
+        "name": "Beige Table Lamp product ",
+        "price": 24.99,
+        "old_price": 200
+    },
+    {
+        "id": 3,
+        "img": "assets/img/pro4.png",
+        "name": "Bamboo basket product",
+        "price": 90,
+        "old_price": 110
+    },
+    {
+        "id": 5,
+        "img": "assets/img/pro10.png",
+        "name": "Bamboo basket product",
+        "price": 350,
+        "old_price": 420
+
+    },
+    {
+        "id": 6,
+        "img": "assets/img/pro6.png",
+        "name": "Bamboo basket product",
+        "price": 350,
+        "old_price": 420
+
+    },
+    {
+        "id": 7,
+        "img": "assets/img/pro7.png",
+        "name": "Bamboo basket product",
+        "price": 350,
+        "old_price": 420
+
+    },
+    {
+        "id": 8,
+        "img": "assets/img/pro3.png",
+        "name": "Bamboo basket product",
+        "price": 350,
+        "old_price": 420
+
+    },
+    {
+        "id": 9,
+        "img": "assets/img/pro9.png",
+        "name": "Bamboo basket product",
+        "price": 350,
+        "old_price": 420
+
+    },
+    {
+        "id": 10,
+        "img": "assets/img/pro10.png",
+        "name": "lorem lorem light product",
+        "price": 115,
+        "old_price": 235
+    },
+
+    {
+        "id": 11,
+        "img": "assets/img/pr1.png",
+        "name": "Loveseat Sofa product",
+        "price": 199.00,
+        "old_price": 400.00
+    },
+    {
+        "id": 8,
+        "img": "assets/img/pro7.png",
+        "name": "Bamboo basket product",
+        "price": 350,
+        "old_price": 420
+
+    },
+    {
+        "id": 0,
+        "img": "assets/img/blog.img/blog1 (7).png",
+        "name": "Decor your bedroom for your children",
+        "date": "October 16, 2023"
+
+    },
+    {
+        "id": 1,
+        "img": "assets/img/blog.img/blog1 (8).png",
+        "name": "Inside a beautiful kitchen organization",
+        "date": "October 16, 2023"
+    },
+    {
+        "id": 2,
+        "img": "assets/img/blog.img/blog1 (9).png",
+        "name": "7 ways to decor your home like a professional",
+        "date": "October 16, 2023"
+
+    },
+    {
+        "id": 3,
+        "img": "assets/img/blog.img/blog1 (1).png",
+        "name": "Modern texas home is beautiful and completely kid-friendly",
+        "date": "October 16, 2023"
+    },
+    {
+        "id": 4,
+        "img": "assets/img/blog.img/blog1 (2).png",
+        "name": "Modern texas home is beautiful and completely kid-friendly",
+        "date": "October 16, 2023"
+
+    },
+    {
+        "id": 5,
+        "img": "assets/img/blog.img/blog1 (3).png",
+        "name": "Modern texas home is beautiful and completely kid-friendly",
+        "date": "October 16, 2023"
+
+    },
+    {
+        "id": 6,
+        "img": "assets/img/blog.img/blog1 (4).png",
+        "name": "Modern texas home is beautiful and completely kid-friendly",
+        "date": "October 16, 2023"
+
+    },
+    {
+        "id": 7,
+        "img": "assets/img/blog.img/blog1 (5).png",
+        "name": "Modern texas home is beautiful and completely kid-friendly",
+        "date": "October 16, 2023"
+
+    },
+    {
+        "id": 8,
+        "img": "assets/img/blog.img/blog1 (6).png",
+        "name": "Modern texas home is beautiful and completely kid-friendly",
+        "date": "October 16, 2023"
+
+    }
+
+
+
+
+
+
+]

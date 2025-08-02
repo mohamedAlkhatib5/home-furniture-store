@@ -1,0 +1,109 @@
+.img-account {
+    border-radius: 50px;
+    position: relative;
+}
+
+.img-account a {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+.navaccuont {
+    background-color: var(--parg-color);
+}
+
+.save-button {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border: none;
+    padding: 15px 10px;
+    border-radius: 10px;
+    width: 25%;
+    transition: 0.3s ease-in-out;
+}
+
+.save-button:hover {
+    color: var(--dark-color);
+    background-color: var(--gray-color);
+    transform: scale(1.1);
+}
+
+.title-account {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+form p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.name-client {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.title-pag-account {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.product-wishlist>p {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.img-con {
+    width: 40%;
+}
+
+.add-button {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.add-button:hover {
+    color: var(--dark-color);
+    background-color: var(--gray-color);
+    transform: scale(1.1);
+}
+
+.nav-myaccount {
+    width: 25%;
+}
+
+.delete_item {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 60px;
+}
+
+@media (max-width: 800px) {
+    .nav-myaccount {
+        width: 100%;
+    }
+    .save-button {
+        width: 50%;
+    }
+    .add-button {
+        width: 100%;
+    }
+    .img-account a {
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+    .img-con {
+        width: 25%;
+    }
+    .tabe button {
+        color: black;
+    }
+}

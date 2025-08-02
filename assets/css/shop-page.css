@@ -1,0 +1,322 @@
+.img-hero {
+    position: relative;
+    padding-right: 0px;
+}
+
+.img-hero img {
+    max-width: 100%;
+    background: cover no-repeat center 100%;
+    position: absolute;
+    inset: 0px;
+    z-index: -1;
+    height: 100%;
+}
+
+.section-1 {
+    margin-top: 0px;
+    height: 70vh;
+    position: relative;
+}
+
+.mytiytl {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.link-page a {
+    color: var(--dark-color);
+}
+
+.link-page a:first-child {
+    color: var(--gray-color);
+}
+
+.link-page a:hover {
+    color: var(--hover);
+}
+
+.cartfilter {
+    height: 130vh;
+    width: 350px;
+    background-color: var(--white-color);
+    transition: 2.2s ease;
+}
+
+.open {
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 130vh;
+    background-color: var(--white-color);
+    transition: 0.2s ease;
+    bottom: 100px;
+}
+
+.link-filter {
+    height: 30%;
+    overflow-y: scroll;
+}
+
+.link-filter a {
+    color: var(--dark-color);
+    text-decoration: none;
+    margin-block: 10px;
+}
+
+.link-filter a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+.title-filter {
+    font-size: 20px;
+}
+
+.link-filter::-webkit-scrollbar {
+    background-color: rgb(234, 234, 234, 1);
+    border-radius: 500px;
+    width: 10px;
+}
+
+.link-filter::-webkit-scrollbar-thumb {
+    background-color: rgb(108, 114, 117, 1);
+    border-radius: 500px;
+    border: 1px solid rgb(91, 95, 97);
+}
+
+.card-shop {
+    width: 300px;
+    height: 300px;
+    padding-bottom: 400px;
+}
+
+.shop {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    row-gap: 150px;
+    column-gap: 5px;
+    margin-inline-start: 40px;
+    padding-bottom: 200px;
+    overflow-x: hidden;
+    padding-inline-end: 20px;
+    height: 100%;
+}
+
+.sort2 {
+    display: grid;
+    grid-template-columns: repeat(1, fr);
+    width: 100%;
+    row-gap: 10px;
+    column-gap: 0;
+    margin-inline-start: 0;
+    padding-bottom: 80px;
+    padding-inline-end: 0px;
+}
+
+.sort2 .card-shop {
+    display: flex;
+    width: 97%;
+    height: 380px;
+    margin-block: 0;
+    padding-bottom: 0;
+    background-color: var(--parg-color);
+    padding-top: 0;
+    justify-content: space-between;
+    margin-inline-start: 30px;
+}
+
+.sort2 .card-shop .imgswip {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+}
+
+.sort2 .card-shop .mom {
+    background-color: var(--parg-color);
+    height: 100%;
+    width: 50%;
+    padding-bottom: 0;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sort2 .card-shop .mom .stars {
+    text-align: center;
+    margin-inline: auto;
+}
+
+.sort2 .card-shop .mon {
+    background-color: var(--parg-color);
+    height: 100%;
+}
+
+.sort2 .card-shop .imgswip img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sortby button {
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+    border: none;
+    background-color: rgba(194, 193, 193, 0.068);
+}
+
+.icon-color {
+    color: var(--gray-color);
+    border: none;
+}
+
+.sortby button:hover i {
+    color: var(--gray-color);
+    border: none;
+}
+
+.card-shop:hover .addm {
+    opacity: 1;
+    transform: 0.5 ease;
+}
+
+.show-more {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px 50px;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.show-more:hover {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 5px var(--gray-color), 0 0 5px var(--gray-color);
+}
+
+.imgswp span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background: var(--white-color);
+    color: var(--gray-color);
+    opacity: 0;
+}
+
+.imgswp:hover span {
+    opacity: 1;
+}
+
+.sort-btn i {
+    font-size: 40px;
+}
+
+@media (max-width: 1462px) {
+    .img-hero {
+        position: relative;
+        margin-inline: 0px;
+    }
+    .card-shop {
+        width: 205px;
+        height: 300px;
+        padding-bottom: 400px;
+    }
+    .cartfilter {
+        height: 130vh;
+        width: 350px;
+        background-color: var(--white-color);
+        transition: 2.2s ease;
+    }
+    .open {
+        left: 0;
+        top: 0;
+        width: 350px;
+        height: 130vh;
+        background-color: var(--white-color);
+        transition: 0.2s ease;
+        bottom: 100px;
+    }
+    .shop {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        row-gap: 20px;
+        column-gap: 50px;
+        margin-inline-start: 40px;
+        padding-bottom: 200px;
+        overflow-x: hidden;
+        height: 100%;
+    }
+}
+
+@media (max-width: 990px) {
+    .section-1 {
+        margin-top: 0px;
+        height: 60vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    .shop {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        row-gap: 40px;
+        column-gap: 5px;
+        margin-inline: 0px;
+        padding-bottom: 200px;
+        padding-inline: 0px;
+    }
+    .sort2 {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        row-gap: 5;
+        column-gap: 0;
+        margin-inline-start: 0;
+        padding-inline-end: 0px;
+    }
+    .card-shop {
+        width: 100%;
+        height: 400px;
+    }
+    .sort2 .card-shop {
+        border-radius: 0px;
+        margin-inline-start: 0px;
+        width: 100%;
+    }
+    .sort2 .card-shop .mom {
+        font-size: 25px;
+    }
+    .cartfilter {
+        height: 130vh;
+        width: 380px;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        bottom: 0;
+        background-color: var(--white-color);
+        transition: 0.2s ease;
+        z-index: 1000;
+    }
+    .open {
+        left: -370px;
+        top: 0;
+        bottom: 0;
+        width: 350px;
+        max-height: 120vh;
+        z-index: 1000;
+        background-color: var(--white-color);
+        transition: 2.2s ease;
+    }
+}
